@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Friend Finder Survey</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> -->
+</head>
+
+<body>
+	<div class="container content">
+		<h1>Survey Time!</h1>
+		<p>Rome wasn't built in a day but building a lasting friendship just might (if you're lucky). It's actually about 30
+			seconds depending on how much effort you're willing to invest. There's no timers, so choose carefully because you're
+			locked in for life once you click submit. No pressure! Good luck!</p>
+		<form>
+			<div class="form-group">
+				<input id="name" type="text" class="form-control" placeholder="Name (Required)">
+			</div>
+			<div class="form-group">
+				<input id="photo" type="text" class="form-control" placeholder="Link to Profile Photo (Required)">
+			</div>
+			<div class="form-group">
+				<label for="question1">I enjoy listening to Taylor Swift.</label>
+				<select class="form-control" id="question1">
+					<option value="blank"></option>
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="1">3</option>
+					<option value="5">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question2">I am private about my personal life.</label>
+				<select class="form-control" id="question2">
+					<option value="blank"></option>
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="1">3</option>
+					<option value="5">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question3">I am very organized and clean.</label>
+				<select class="form-control" id="question3">
+					<option value="blank"></option>
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="1">3</option>
+					<option value="5">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question4">I enjoy using social media.</label>
+				<select class="form-control" id="question4">
+					<option value="blank"></option>
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="1">3</option>
+					<option value="5">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question5">I like to try new foods.</label>
+				<select class="form-control" id="question5">
+					<option value="blank"></option>
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="1">3</option>
+					<option value="5">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question6">I enjoy listening to classical music.</label>
+				<select class="form-control" id="question6">
+					<option value="blank"></option>
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="1">3</option>
+					<option value="5">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question7">I like Die Hard movies.</label>
+				<select class="form-control" id="question7">
+					<option value="blank"></option>
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="1">3</option>
+					<option value="5">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question8">I like candies and sweets.</label>
+				<select class="form-control" id="question8">
+					<option value="blank"></option>
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="1">3</option>
+					<option value="5">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question9">I work out at the gym often.</label>
+				<select class="form-control" id="question9">
+					<option value="blank"></option>
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="1">3</option>
+					<option value="5">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question10">I am good with money.</label>
+				<select class="form-control" id="question10">
+					<option value="blank"></option>
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="1">3</option>
+					<option value="5">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question11">I like reading.</label>
+				<select class="form-control" id="question11">
+					<option value="blank"></option>
+					<option value="0">1</option>
+					<option value="1">2</option>
+					<option value="1">3</option>
+					<option value="5">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+		</form>
+		<div class="text-center">
+			<button id="submitBtn" type="submit" class="btn btn-success btn-lg">No take backsies</button>
+		</div>
+
+		<!-- Modal after survey completion -->
+		<div id="friendModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h3 class="modal-title">Have fun!</h1>
+					</div>
+					<div class="modal-body">
+						<h2 id="friend"></h2>
+						<img id="friendPhoto" src="#">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Added link to the jQuery Library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Added a link to Bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<script type="text/javascript">
+		$("#submitBtn").on("click", function (event) {
+			event.preventDefault();
+			// Form validation
+			var valid = true;
+			if ($("#name").val() === "" || $("#photo").val() === "") {
+				valid = false;
+			}
+			else if (
+				$("#question1").val() === "blank" ||
+				$("#question2").val() === "blank" ||
+				$("#question3").val() === "blank" ||
+				$("#question4").val() === "blank" ||
+				$("#question5").val() === "blank" ||
+				$("#question6").val() === "blank" ||
+				$("#question7").val() === "blank" ||
+				$("#question8").val() === "blank" ||
+				$("#question9").val() === "blank" ||
+				$("#question10").val() === "blank" ||
+				$("#question11").val() === "blank") {
+				valid = false;
+			}
+			if (valid === true) {
+				var newUser = {
+					name: $("#name").val().trim(),
+					photo: $("#photo").val().trim(),
+					scores: [
+						$("#question1").val(),
+						$("#question2").val(),
+						$("#question3").val(),
+						$("#question4").val(),
+						$("#question5").val(),
+						$("#question6").val(),
+						$("#question7").val(),
+						$("#question8").val(),
+						$("#question9").val(),
+						$("#question10").val(),
+						$("#question11").val()
+					]
+
+				};
+				console.log("new user" + newUser.scores)
+
+				// Ajax call for receiving response after POST req
+				$.post(window.location.origin + "/api/friends", newUser, function (data) {
+					$("#friend").text(data.name);
+					$("#friendPhoto").attr("src", data.photo);
+					// $("#friendModal").modal("toggle");
+				});
+			} else {
+				// If a required field is missing, show alert
+				alert("Survey is incomplete!");
+			}
+		});
+	</script>
+</body>
+
+</html>
