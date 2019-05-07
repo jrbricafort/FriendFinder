@@ -43,6 +43,4 @@ var friends = [
     }
 ];
 
-//make certain traits worth x10* 
-
 module.exports = friends;
