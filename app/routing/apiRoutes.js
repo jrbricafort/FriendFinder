@@ -26,19 +26,27 @@ module.exports = function (app) {
             console.log(friends[i].scores.length);
             for (var j = 0; j < friends[i].scores.length; j++) {
                 difference += Math.abs(userScores[j] - friends[i].scores[j]);
-                console.log("Look at me " + difference)
                 // console.log(friends[i].scores[j])
             }
+            console.log("Look at me " + difference)
             allDifferences.push(difference);
         }
 
-        // console.log(allDifferences)
+        console.log(allDifferences)
 
-        for (var k = 0; k < allDifferences; k++) {
+        for (var k = 0; k < allDifferences.length; k++) {
             if (allDifferences[k] < variance) {
                 variance = allDifferences[k];
             }
         }
+
+        var indexPosition = 0
+        for (var l = 0; l < allDifferences.length; l++) {
+            if (variance === allDifferences[l]) {
+                indexPosition = l;
+            }
+        }
+        console.log("index position " + indexPosition)
 
         console.log(variance)
 
