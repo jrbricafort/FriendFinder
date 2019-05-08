@@ -40,7 +40,7 @@ module.exports = function (app) {
             }
         }
 
-        var indexPosition = 0
+        // var indexPosition = 0
         for (var l = 0; l < allDifferences.length; l++) {
             if (variance === allDifferences[l]) {
                 indexPosition = l;
@@ -52,6 +52,6 @@ module.exports = function (app) {
 
         friends.push(user);
 
-        res.json(friends[bestMatch]);
+        res.json(friends[indexPosition]);
     });
 };
